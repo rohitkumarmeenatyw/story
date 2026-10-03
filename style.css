@@ -1,0 +1,709 @@
+
+/* Google Fonts */
+:root {
+    --bg: #171613;
+    --surface: #211f1a;
+    --text: #e8dfcd;
+    --muted: #a69b87;
+    --accent: #b89a70;
+    --border: #39352d;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', serif;
+    min-height: 100vh;
+}
+
+
+/* Header */
+header {
+    width: 100%;
+    padding: 24px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Hero */
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: clamp(32px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 800px;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 21px;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .hero {
+        min-height: 65vh;
+    }
+}
+
+
+
+/* =========================
+   STORYNEST - GLOBAL
+========================= */
+
+:root {
+    --bg: #171613;
+    --surface: #211f1a;
+    --surface-light: #29261f;
+    --text: #e8dfcd;
+    --muted: #a69b87;
+    --accent: #b89a70;
+    --accent-hover: #d0b18a;
+    --border: #39352d;
+    --danger: #b56c60;
+    --font-heading: 'Libre Baskerville', serif;
+    --font-body: 'EB Garamond', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 23px;
+    letter-spacing: -1px;
+    color: var(--text);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+nav a {
+    color: var(--muted);
+    font-size: 18px;
+    transition: color 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 6vw, 68px);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 22px;
+    margin-top: 22px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn,
+.secondary-btn,
+#search-btn,
+#save-entry {
+    border: 1px solid var(--accent);
+    padding: 10px 24px;
+    transition: 0.25s ease;
+}
+
+.primary-btn,
+#search-btn,
+#save-entry {
+    background: var(--accent);
+    color: #171613;
+}
+
+.primary-btn:hover,
+#search-btn:hover,
+#save-entry:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+.secondary-btn {
+    color: var(--text);
+    background: transparent;
+}
+
+.secondary-btn:hover {
+    background: var(--surface);
+    color: var(--accent);
+}
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+.reading-section,
+.diary-section {
+    padding: 100px 8%;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 400;
+}
+
+.section-heading p {
+    color: var(--muted);
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* =========================
+   BOOK SEARCH
+========================= */
+
+.search-box {
+    display: flex;
+    max-width: 680px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 17px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+.search-box input::placeholder,
+.diary-editor input::placeholder,
+.diary-editor textarea::placeholder {
+    color: #857d70;
+}
+
+.search-box input:focus,
+.diary-editor input:focus,
+.diary-editor textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+.search-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 6px 17px;
+    transition: 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.search-status {
+    text-align: center;
+    color: var(--muted);
+    margin: 20px 0;
+    min-height: 28px;
+}
+
+/* =========================
+   BOOK GRID
+========================= */
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(180px, 1fr)
+    );
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.book-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 18px;
+    transition: transform 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.book-cover {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    background: var(--surface-light);
+    display: block;
+    margin-bottom: 16px;
+}
+
+.book-card h3 {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 7px;
+}
+
+.book-card p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.book-card button {
+    margin-top: 14px;
+    padding: 7px 15px;
+    border: 1px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+}
+
+.book-card button:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.empty-message {
+    text-align: center;
+    color: var(--muted);
+    padding: 45px 15px;
+    grid-column: 1 / -1;
+}
+
+.empty-message h3 {
+    color: var(--text);
+    font-family: var(--font-heading);
+    font-size: 19px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   DIARY EDITOR
+========================= */
+
+.diary-editor {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+.diary-editor label {
+    display: block;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.diary-editor input,
+.diary-editor textarea {
+    display: block;
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 13px 15px;
+    margin-bottom: 22px;
+    resize: vertical;
+}
+
+.diary-editor textarea {
+    min-height: 180px;
+}
+
+.diary-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.diary-actions > div {
+    display: flex;
+    gap: 10px;
+}
+
+#diary-date {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+#cancel-edit {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 9px 18px;
+}
+
+/* =========================
+   DIARY ENTRIES
+========================= */
+
+.entries-heading {
+    max-width: 760px;
+    margin: 55px auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.entries-heading h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#entry-count {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.diary-entries {
+    max-width: 760px;
+    margin: 0 auto;
+    display: grid;
+    gap: 18px;
+}
+
+.diary-entry {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+.diary-entry h3 {
+    font-family: var(--font-heading);
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.diary-entry p {
+    color: var(--muted);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin-top: 12px;
+}
+
+.entry-date {
+    display: block;
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.entry-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.entry-actions button {
+    background: transparent;
+    border: 1px solid var(--border);
+    padding: 5px 13px;
+    color: var(--text);
+}
+
+.entry-actions button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 45px 8% 20px;
+    text-align: center;
+}
+
+.footer-content > p {
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: var(--muted);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    margin-top: 35px;
+    padding-top: 18px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 17px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .reading-section,
+    .diary-section {
+        padding: 75px 5%;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(145px, 1fr)
+        );
+        gap: 15px;
+    }
+}
+
+@media (max-width: 520px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        min-height: 65vh;
+    }
+
+    .hero p {
+        font-size: 19px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 230px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    #search-btn {
+        width: 100%;
+    }
+
+    .diary-editor {
+        padding: 20px;
+    }
+
+    .entries-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

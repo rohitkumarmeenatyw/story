@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StoryNest | A Quiet Place to Read</title>
+    <meta name="description" content="Discover books, explore stories, and write your thoughts in a quiet reading and diary space.">
+    <meta name="theme-color" content="#171613">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="#home" class="logo">StoryNest</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#reading">Reading Room</a>
+            <a href="#diary">My Diary</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Home -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">WELCOME TO STORYNEST</span>
+
+                <h1>A quiet place<br>for stories.</h1>
+
+                <p>
+                    Read a little. Write a little.
+                    Stay awhile.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#reading" class="primary-btn">
+                        Explore Books
+                    </a>
+
+                    <a href="#diary" class="secondary-btn">
+                        Open Diary
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reading Room -->
+        <section id="reading" class="reading-section">
+
+            <div class="section-heading">
+                <span class="eyebrow">THE LIBRARY</span>
+                <h2>Reading Room</h2>
+                <p>
+                    Find a story worth getting lost in.
+                </p>
+            </div>
+
+            <!-- Book Search -->
+            <div class="search-box">
+                <input
+                    type="search"
+                    id="book-search"
+                    placeholder="Search by title, author or ISBN..."
+                    aria-label="Search books"
+                >
+
+                <button id="search-btn" type="button">
+                    Search
+                </button>
+            </div>
+
+            <!-- Search Filters -->
+            <div class="search-filters">
+                <button class="filter-btn active" data-filter="all">
+                    All Books
+                </button>
+
+                <button class="filter-btn" data-filter="title">
+                    Title
+                </button>
+
+                <button class="filter-btn" data-filter="author">
+                    Author
+                </button>
+
+                <button class="filter-btn" data-filter="subject">
+                    Subject
+                </button>
+            </div>
+
+            <!-- Search Status -->
+            <div
+                id="search-status"
+                class="search-status"
+                aria-live="polite"
+            ></div>
+
+            <!-- Book Results -->
+            <div id="book-results" class="book-grid">
+                <div class="empty-message">
+                    <h3>Your next favorite book is waiting.</h3>
+                    <p>Search for a book to begin exploring.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- My Diary -->
+        <section id="diary" class="diary-section">
+
+            <div class="section-heading">
+                <span class="eyebrow">PERSONAL JOURNAL</span>
+                <h2>My Diary</h2>
+                <p>
+                    A little space for your thoughts.
+                </p>
+            </div>
+
+            <!-- Diary Editor -->
+            <div class="diary-editor">
+
+                <label for="diary-title">
+                    Entry title
+                </label>
+
+                <input
+                    type="text"
+                    id="diary-title"
+                    placeholder="Give your entry a title..."
+                    maxlength="100"
+                >
+
+                <label for="diary-content">
+                    Your thoughts
+                </label>
+
+                <textarea
+                    id="diary-content"
+                    placeholder="Write your thoughts here..."
+                    rows="8"
+                ></textarea>
+
+                <div class="diary-actions">
+                    <span id="diary-date"></span>
+
+                    <div>
+                        <button
+                            id="cancel-edit"
+                            type="button"
+                            hidden
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            id="save-entry"
+                            type="button"
+                        >
+                            Save Entry
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Saved Entries -->
+            <div class="entries-heading">
+                <h3>Your Pages</h3>
+                <span id="entry-count">0 entries</span>
+            </div>
+
+            <div
+                id="diary-entries"
+                class="diary-entries"
+            >
+                <div class="empty-message">
+                    <h3>Your pages are waiting to be filled.</h3>
+                    <p>Write your first diary entry above.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="#home" class="logo">StoryNest</a>
+
+            <p>
+                A quiet corner of the internet.
+            </p>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#reading">Reading Room</a>
+                <a href="#diary">My Diary</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="current-year">2026</span>
+                StoryNest. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
